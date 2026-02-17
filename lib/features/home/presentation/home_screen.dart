@@ -6,6 +6,7 @@ import 'package:smart_travel_alarm/constants/app_images.dart';
 import 'package:smart_travel_alarm/constants/app_text_styles.dart';
 
 import '../../../constants/app_strings.dart';
+import '../../alarm/presentation/ alarm_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -93,6 +94,7 @@ class HomeScreen extends StatelessWidget {
               // Home Button
               PrimaryButton(
                 onPressed: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (_)=>AlarmScreen()));
 
                 },
                 text: AppStrings.home,

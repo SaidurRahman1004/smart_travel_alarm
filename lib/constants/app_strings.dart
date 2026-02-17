@@ -11,4 +11,9 @@ class AppStrings {
   static const String skip = "Skip";
   static const String next = "Next";
   static const String getStarted = "Get Started";
+
+  // Alarm Screen
+  static const String selectedLocation = "Selected Location";
+  static const String addYourLocation = "Add your location";
+  static const String alarms = "Alarms";
 }

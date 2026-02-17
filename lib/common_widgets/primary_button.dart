@@ -5,7 +5,7 @@ import '../constants/app_colors.dart';
 import '../constants/app_text_styles.dart';
 
 class PrimaryButton extends StatelessWidget {
-  final VoidCallback onPressed;
+  final VoidCallback? onPressed;
   final String text;
 
   const PrimaryButton({super.key, required this.onPressed, required this.text});
@@ -19,6 +19,7 @@ class PrimaryButton extends StatelessWidget {
         onPressed: onPressed,
         style: ElevatedButton.styleFrom(
           backgroundColor: AppColors.primaryButton,
+          disabledBackgroundColor: Colors.grey.withAlpha(30),
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(
               69.r,

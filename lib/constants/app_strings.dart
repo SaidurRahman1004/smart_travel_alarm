@@ -5,6 +5,7 @@ class AppStrings {
   static const String welcomeSubtitle =
       "Stay on schedule and enjoy every\nmoment of your journey.";
   static const String useCurrentLocation = "Use Current Location";
+  static const String refressLocation = "Refresh Location";
   static const String home = "Home";
 
   // Common Strings

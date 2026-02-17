@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../constants/app_colors.dart';
+import '../../../constants/app_strings.dart';
 import '../../../constants/app_text_styles.dart';
 
 class OnboardingPage extends StatelessWidget {
@@ -46,7 +47,7 @@ class OnboardingPage extends StatelessWidget {
                 right: 20.w,
                 child: TextButton(
                   onPressed: onSkip,
-                  child: Text('Skip', style: AppTextStyles.skipButton),
+                  child: Text(AppStrings.skip, style: AppTextStyles.skipButton),
                 ),
               ),
             ],

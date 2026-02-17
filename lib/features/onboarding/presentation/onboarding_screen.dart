@@ -6,6 +6,9 @@ import 'package:smart_travel_alarm/constants/app_colors.dart';
 import 'package:smart_travel_alarm/features/onboarding/data/onboarding_content.dart';
 import 'package:smart_travel_alarm/features/onboarding/widgets/onboarding_page.dart';
 
+import '../../../constants/app_strings.dart';
+import '../../home/presentation/home_screen.dart';
+
 class OnboardingScreen extends StatefulWidget {
   const OnboardingScreen({super.key});
 
@@ -34,7 +37,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
         curve: Curves.easeInOut,
       );
     } else {
-      debugPrint("Get Started!");
+      Navigator.push(context, MaterialPageRoute(builder: (_)=>HomeScreen()));
     }
   }
 
@@ -85,12 +88,12 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                     ),
                   ),
                   SizedBox(height: 40.h),
-                  // Next/Get Started Button
+                  // Next Started Button
                   PrimaryButton(
                     onPressed: _onNext,
                     text: _currentPage == contents.length - 1
-                        ? 'Get Started'
-                        : 'Next',
+                        ? AppStrings.getStarted
+                        : AppStrings.next,
                   ),
                 ],
               ),

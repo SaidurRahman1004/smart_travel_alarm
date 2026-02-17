@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import 'features/onboarding/presentation/onboarding_screen.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -12,13 +14,19 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
-      designSize: const Size(360, 800), //screen Size for responsive
+      designSize: const Size(360, 800),
       minTextAdapt: true,
       splitScreenMode: true,
-      child: MaterialApp(
-        theme: ThemeData(fontFamily: 'Oxygen', brightness: Brightness.dark),
-        title: 'Smart Travel Alarm',
-      ),
+      builder: (context, child) {
+        return MaterialApp(
+          debugShowCheckedModeBanner: false,
+          theme: ThemeData(fontFamily: 'Oxygen', brightness: Brightness.dark),
+          title: 'Smart Travel Alarm',
+          home: child,
+        );
+      },
+      child: const OnboardingScreen(),
     );
+
   }
 }

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';
 
+import 'features/alarm/providers/alarm_provider.dart';
 import 'features/home/providers/location_provider.dart';
 import 'features/onboarding/presentation/onboarding_screen.dart';
 
@@ -19,6 +20,7 @@ class MyApp extends StatelessWidget {
     return MultiProvider(
       providers: [
         ChangeNotifierProvider(create: (_)=>LocationProvider()),
+        ChangeNotifierProvider(create: (_) => AlarmProvider()),
       ],
       child: ScreenUtilInit(
         designSize: const Size(360, 800),

@@ -17,4 +17,7 @@ class AppStrings {
   static const String selectedLocation = "Selected Location";
   static const String addYourLocation = "Add your location";
   static const String alarms = "Alarms";
+  static const String emtyAlarm = "No alarms set yet.\nPress '+' to add one";
+  static const String deleteAlarm = "Alarm deleted";
+
 }

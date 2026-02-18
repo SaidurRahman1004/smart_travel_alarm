@@ -203,7 +203,4 @@ CREATE TABLE alarms (
 
 
 
-**Developer**: SaidurRahman1004  
-**GitHub**: [github.com/SaidurRahman1004](https://github.com/SaidurRahman1004)
 
----

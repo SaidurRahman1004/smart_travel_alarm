@@ -27,7 +27,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
   }
 
   void _onSkip() {
-    debugPrint("Skip button pressed!");
+    Navigator.push(context, MaterialPageRoute(builder: (_)=>HomeScreen()));
   }
 
   void _onNext() {

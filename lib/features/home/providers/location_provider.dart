@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'package:smart_travel_alarm/constants/app_strings.dart';
 
 import '../../../services/location_service.dart';
 
@@ -24,7 +25,7 @@ class LocationProvider extends ChangeNotifier {
     final result = await _locationService.getLocation();
     if (result.hasError) {
       _state = LocationFetchState.error;
-      _errorMessage = result.error!;
+      _errorMessage = result.error ?? AppStrings.errorOcrd;
     }else{
       _state = LocationFetchState.success;
       _displayAddress = result.address!;

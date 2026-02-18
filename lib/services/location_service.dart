@@ -52,8 +52,10 @@ class LocationService {
         ),
       );
       //get address from location
+      String address = await _getAddressFromLatLng(position);
 
-      return LocationResult(position: position, error: null);
+
+      return LocationResult(position: position, error: null,address: address);
     } catch (e) {
       return LocationResult(position: null, error: e.toString());
     }

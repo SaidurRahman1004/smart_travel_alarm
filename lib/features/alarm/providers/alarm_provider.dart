@@ -26,6 +26,7 @@ class AlarmProvider extends ChangeNotifier {
   Future<void> addAlarm(DateTime dateTime) async {
     final newAlarm = AlarmModel(dateTime: dateTime, isActive: true);
     final createdAlarm = await _dbHelper.createAlarm(newAlarm);
+    debugPrint(" Adding alarm: ${dateTime.toString()}");
 
     // schedule Notification
     if (createdAlarm.id != null) {
@@ -35,6 +36,7 @@ class AlarmProvider extends ChangeNotifier {
         "It's time for your scheduled activity.",
         createdAlarm.dateTime,
       );
+      debugPrint(" Alarm #${createdAlarm.id} created and scheduled");
     }
     await loadAlarms();
   }
@@ -49,7 +51,7 @@ class AlarmProvider extends ChangeNotifier {
       await _notificationService.scheduleNotification(
         updatedAlarm.id!,
         "Alarm Ringing!",
-        "It's time to wake up.",
+        "Notification Alarm Started",
         updatedAlarm.dateTime,
       );
     } else {

@@ -26,9 +26,11 @@ class LocationProvider extends ChangeNotifier {
     if (result.hasError) {
       _state = LocationFetchState.error;
       _errorMessage = result.error ?? AppStrings.errorOcrd;
+      debugPrint(" Location Error: $_errorMessage");
     }else{
       _state = LocationFetchState.success;
-      _displayAddress = result.address!;
+      _displayAddress = result.address ?? AppStrings.UknLocation;
+      debugPrint(" Location fetched: $_displayAddress");
     }
     notifyListeners();
   }

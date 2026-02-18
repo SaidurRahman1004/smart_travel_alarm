@@ -20,6 +20,7 @@ class AppStrings {
   static const String emtyAlarm = "No alarms set yet.\nPress '+' to add one";
   static const String deleteAlarm = "Alarm deleted";
   static const String errorOcrd = "An unknown error occurred";
+  static const String UknLocation = " Unknown Location";
 
 
 }

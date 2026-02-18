@@ -5,10 +5,9 @@ import 'package:geolocator/geolocator.dart';
 class LocationResult {
   final Position? position;
   final String? address;
-
   final String? error;
 
-  LocationResult({required this.position, required this.error, this.address});
+  LocationResult({this.position, this.address, this.error});
 
   //getter cheak error
   bool get hasError => error != null;

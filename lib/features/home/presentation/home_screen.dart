@@ -72,7 +72,7 @@ class HomeScreen extends StatelessWidget {
                     children: [
                       Icon(
                         Icons.location_on,
-                        color: AppColors.primaryButton.withOpacity(0.8),
+                        color: AppColors.primaryButton.withAlpha(80),
                         size: 16.r,
                       ),
                       SizedBox(width: 8.w),
